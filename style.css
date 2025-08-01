@@ -1,0 +1,109 @@
+:root {
+      --cor-fundo: #1a001f;
+        --cor-texto: #ffffff;
+          --cor-rosa: #ff70b9;
+            --cor-rosa-claro: #ffc6e6;
+              --cor-botao: #ff70b9;
+              }
+
+              body {
+                margin: 0;
+                  font-family: 'Poppins', sans-serif;
+                    background: var(--cor-fundo);
+                      color: var(--cor-texto);
+                        display: flex;
+                          justify-content: center;
+                            align-items: center;
+                              min-height: 100vh;
+                                flex-direction: column;
+                                  transition: 0.4s;
+                                    overflow: hidden;
+                                    }
+
+                                    .container {
+                                      text-align: center;
+                                        background-color: rgba(255, 255, 255, 0.05);
+                                          padding: 2rem;
+                                            border-radius: 20px;
+                                              box-shadow: 0 0 20px var(--cor-rosa);
+                                                position: relative;
+                                                  max-width: 90%;
+                                                  }
+
+                                                  .clock {
+                                                    font-size: 4.5rem;
+                                                      font-weight: bold;
+                                                        color: var(--cor-rosa);
+                                                          text-shadow: 0 0 15px var(--cor-rosa);
+                                                            transition: 0.2s;
+                                                            }
+
+                                                            .date {
+                                                              font-size: 1.2rem;
+                                                                margin-top: 1rem;
+                                                                  color: var(--cor-rosa-claro);
+                                                                  }
+
+                                                                  .assinatura {
+                                                                    margin: 1.2rem 0 0.5rem;
+                                                                      font-style: italic;
+                                                                        font-size: 1rem;
+                                                                          color: var(--cor-rosa-claro);
+                                                                          }
+
+                                                                          .buttons {
+                                                                            display: flex;
+                                                                              justify-content: center;
+                                                                                gap: 1.5rem;
+                                                                                  margin-top: 1rem;
+                                                                                    flex-wrap: wrap;
+                                                                                    }
+
+                                                                                    button {
+                                                                                      padding: 0.8rem 1.6rem;
+                                                                                        font-size: 1rem;
+                                                                                          border: none;
+                                                                                            border-radius: 999px;
+                                                                                              background-color: var(--cor-botao);
+                                                                                                color: white;
+                                                                                                  cursor: pointer;
+                                                                                                    box-shadow: 0 0 10px var(--cor-botao);
+                                                                                                      transition: 0.3s;
+                                                                                                      }
+
+                                                                                                      button:hover {
+                                                                                                        transform: scale(1.05);
+                                                                                                          box-shadow: 0 0 15px var(--cor-botao);
+                                                                                                          }
+
+                                                                                                          body.claro {
+                                                                                                            --cor-fundo: #ffeaf5;
+                                                                                                              --cor-texto: #1a001f;
+                                                                                                                --cor-rosa: #cc0a85;
+                                                                                                                  --cor-botao: #e94fb5;
+                                                                                                                  }
+
+                                                                                                                  body.celebrar .clock {
+                                                                                                                    animation: brilho 0.8s infinite alternate;
+                                                                                                                    }
+
+                                                                                                                    @keyframes brilho {
+                                                                                                                      0% {
+                                                                                                                          text-shadow: 0 0 15px #ff70b9, 0 0 30px #ff70b9;
+                                                                                                                            }
+                                                                                                                              100% {
+                                                                                                                                  text-shadow: 0 0 20px #ffc6e6, 0 0 40px #f72585;
+                                                                                                                                    }
+                                                                                                                                    }
+
+                                                                                                                                    @media (max-width: 500px) {
+                                                                                                                                      .clock {
+                                                                                                                                          font-size: 3rem;
+                                                                                                                                            }
+
+                                                                                                                                              .buttons {
+                                                                                                                                                  flex-direction: column;
+                                                                                                                                                      gap: 1rem;
+                                                                                                                                                        }
+                                                                                                                                                        
+}
